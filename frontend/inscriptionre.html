@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HireLink</title>
+        <link rel="stylesheet" href="inscriptionre.css">
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+
+
+
+        <form action="" method="post">
+
+            <h2>Inscription/Recruteur</h2>
+            <?php if (isset($erreur)): ?>
+            <div>
+                <?php echo $erreur; ?>
+            </div>
+            <?php endif; ?>
+            <div>
+                <div>
+                    <label for="nom"><strong>Nom :</strong></label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom de famille">
+                </div>
+                <div>
+                    <label for="prenom"><strong>Prenom :</strong></label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Prenom">
+                </div>
+            </div>
+            <div>
+                <label for="email"><strong>Email :</strong></label>
+                <input type="text" id="email" name="email" placeholder="xyz@example.com" />
+            </div>
+
+            <div>
+                <label for="motdepasse"><strong>Mot de passe :</strong></label>
+                <input type="password" id="motdepasse" name="motdepasse" />
+                <input type="checkbox" id="motdepasse" class="form-check-input" onclick="afficherMotDePasse()"> Afficher
+                le mot de passe
+            </div>
+            <div>
+                <label for="motdepasseconf"><strong>Confirmation de mot de passe
+                        :</strong></label>
+                <input type="password" id="motdepasseconf" />
+            </div>
+            <div>
+                <label for="tele"><strong>N° Téléphone :</strong></label>
+                <input type="tel" id="tele" name="tele" />
+            </div>
+
+            <div>
+                <div>
+                    <label for="pays"><strong>Pays :</strong></label>
+                    <input type="text" id="pays" name="pays" />
+                </div>
+                <div>
+                    <label for="ville"><strong>Ville :</strong></label>
+                    <input type="text" id="ville" name="ville" />
+                </div>
+            </div>
+            <div>
+                <label for="nom_entreprise"><strong> Nom de l'entreprise :</strong></label>
+                <input type="tel" id="nom_entreprise" name="nom_entreprise" />
+            </div>
+            <div>
+                <label for="sexe"><strong>Sexe :</strong></label>
+                <br>
+                <input type="radio" name="sexe" id="sexe1" value="Homme">Homme
+                <input type="radio" name="sexe" id="sexe2" value="Femme">Femme
+            </div>
+            <div>
+                <button id="button" type="submit" name="submit">S'inscrire</button>
+            </div>
+            <h6>Déjà inscrit(e)? </h6>
+            <a href="connexion.php">S'identifier</a>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </body>
+
+</html>
