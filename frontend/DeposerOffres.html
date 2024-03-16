@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter des offres</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="DeposerOffres.css">
+    <link rel="icon" href="imglogo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Déposer une offre d'emploi</h1>
+        <p></p>
+        <form>
+            <div class="row">
+                <div class="column">
+                    <label for="entreprise">Nom de l'entreprise</label>
+                    <input type="entreprise" id="entreprise" placeholder="Entrez le nom de l'entreprise" required>
+                    <label for="Lieu">Lieu</label>
+                    <input type="Lieu" id="Lieu" placeholder="Entrez le lieu de travail" required>
+                    <label for="poste">Titre du poste</label>
+                    <input type="poste" id="poste" placeholder="Entrez le titre du poste" required>
+                </div>
+                <div class="column">
+                    <label for="descrip">Déscription de l'offre</label>
+                    <textarea id="descrip" placeholder="Veuillez fournir une description de l'offre" rows="7" required></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="Responsabilites">Responsabilités</label>
+                    <textarea id="Responsabilites" placeholder="Précisez les responsabilités de l'offre" rows="3" required></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="Exigences">Exigences</label>
+                    <textarea id="Exigences" placeholder="Précisez les exigences de l'offre" rows="3" required></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="poster()">Poster</button>
+        </form>
+    </div>
+    <!--
+    <script>
+        
+        function poster() {
+            var entreprise = document.getElementById("entreprise").value;
+            var poste = document.getElementById("poste").value;
+            var descrip = document.getElementById("descrip").value;
+            var Responsabilites = document.getElementById("Responsabilites").value;
+            var Exigences = document.getElementById("Exigences").value;
+            var Lieu = document.getElementById("Lieu").value;
+            
+            // Convertir les chaînes de texte en listes
+            var listeResponsabilites = Responsabilites.split('\n');
+            var listeExigences = Exigences.split('\n');
+            
+            // Créer un objet d'offre
+            var offre = {
+                entreprise: entreprise,
+                poste: poste,
+                descrip: descrip,
+                Responsabilites: listeResponsabilites,
+                Exigences: listeExigences,
+                Lieu: Lieu
+            };
+    
+            // Stocker l'objet d'offre dans le stockage local
+            var offres = JSON.parse(localStorage.getItem('offres')) || [];
+            offres.push(offre);
+            localStorage.setItem('offres', JSON.stringify(offres));
+    
+            // Rediriger vers la page d'accueil
+            window.location.href = "OffresAcc.html";
+            window.location.href = "OffresCandidat.html";
+            window.location.href = "OffresR.html";
+
+            
+        }
+        
+
+    </script>-->
+    <script>
+        function poster() {
+            var entreprise = document.getElementById("entreprise");
+            var poste = document.getElementById("poste");
+            var descrip = document.getElementById("descrip");
+            var Responsabilites = document.getElementById("Responsabilites");
+            var Exigences = document.getElementById("Exigences");
+            var Lieu = document.getElementById("Lieu");
+            
+            // Vérifier si chaque champ est vide
+            if (entreprise.value.trim() === '') {
+                entreprise.classList.add('error');
+                return;
+            }
+            if (poste.value.trim() === '') {
+                poste.classList.add('error');
+                return;
+            }
+            if (descrip.value.trim() === '') {
+                descrip.classList.add('error');
+                return;
+            }
+            if (Responsabilites.value.trim() === '') {
+                Responsabilites.classList.add('error');
+                return;
+            }
+            if (Exigences.value.trim() === '') {
+                Exigences.classList.add('error');
+                return;
+            }
+            if (Lieu.value.trim() === '') {
+                Lieu.classList.add('error');
+                return;
+            }
+
+            
+            
+            // Créer un objet d'offre
+            var offre = {
+                entreprise: entreprise.value,
+                poste: poste.value,
+                descrip: descrip.value,
+                Responsabilites: Responsabilites.value,
+                Exigences: Exigences.value,
+                Lieu: Lieu.value
+            };
+
+            // Stocker l'objet d'offre dans le stockage local
+            var offres = JSON.parse(localStorage.getItem('offres')) || [];
+            offres.push(offre);
+            localStorage.setItem('offres', JSON.stringify(offres));
+
+            // Rediriger vers la page 
+            window.location.href = "Offres.html";
+            window.location.href = "recruteur.html";
+        }
+        // Supprimer la classe d'erreur lorsque l'utilisateur commence à remplir le champ
+        document.querySelectorAll('input, textarea').forEach(element => {
+            element.addEventListener('input', function() {
+                this.classList.remove('error');
+            });
+        });
+    </script>
+</body>
+</html>

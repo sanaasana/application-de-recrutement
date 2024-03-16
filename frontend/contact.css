@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: sans-serif;
+}
+/*------section*/
+#nav-bar{
+    position:sticky;
+    top:0;
+    z-index:10;
+    
+    
+}
+/*-----------nav-----*/
+.navbar{
+  
+   
+    padding:0;
+     background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+ }
+ /*-------------le logo---*/
+.navbar-brand  h1 {
+    padding-left: 50px; /* l'espace de  logo  */
+    color:White;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 50px; 
+    text-shadow: 5px 5px 4px rgb(146,60,117);
+    
+    margin-right: 480px; /* l'espace entre logo et les autre items */
+
+}
+.logo{
+text-shadow: 5px 5px 7px rgb(146,60,117);
+font-size: 46px; 
+color:white;
+
+}
+/* -------------ul------------*/
+.navbar-nav {
+    margin-left: 80px;
+
+
+}
+/*--------------pour ul et li----------*/
+
+.navbar-nav li {
+    padding: 0  15px; /*  control spacing between nav items */
+   
+}
+/*--------------pour ul et li et a ----------*/
+.navbar-nav li a {
+    color: white;
+    font-weight: 600;
+   text-align: right;
+    
+}
+/* pour les effets */
+.navbar-nav li::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    display:block;
+    margin:auto;
+    transition:0.5s;
+  
+ }
+
+
+.navbar-nav li:hover::after
+ {
+    width:100%;
+   
+   
+ }
+
+ /*---------------banner style---------------*/
+ #banner{
+    background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+    color: white;
+    padding-top: 5%;
+ }
+ 
+ 
+ /*-----------pour le style  wave a lafin------------*/
+ .bottom-img{
+    width:100%;
+ }
+  /*-------titre de contact us -----------*/
+
+  .titre{
+   
+    color: rgb(255, 253, 208);
+    
+    margin-left: 450px;
+    margin-bottom: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:60px;
+    text-shadow: 6px 6px 7px white;
+  }
+  .titre2{
+    color:white;
+    margin-bottom: 100px;
+    margin-left: 365px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:45px;
+    
+  }
+  /*---------------contact body---------*/
+.contact-body{
+    max-width:1320px;
+    margin: 0 auto;
+    padding:0 1rem;
+
+}
+.contact-info{
+    margin:2rem 0;
+    text-align: center;
+    padding: 2rem 0;
+
+}
+.contact-info span{
+    display: block;
+}
+.contact-info div{
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+
+.contact-info span .fas{
+   font-size:2rem;
+   padding-bottom: 0.9rem;
+   color:rgb(255,199,39);
+}
+.contact-info div  span:nth-child(2){
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.contact-info .text{
+    padding-top:0.4rem;
+}
+.contact-form{
+    padding: 2rem 0;
+    border-top: 1px solid rgb(146,60,117);
+    
+}
+.contact-form form{
+    padding-bottom: 1rem ;
+
+}
+
+.form-control{
+    width:100%;
+    border: 1.5px solid rgb(255,199,39);
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'Open Sans',sans-serif;
+font-size: 1rem;
+outline: 0;
+}
+.form-control:focus{
+    box-shadow: 0 0 6px -3px rgba(18,2,40,1);
+}
+.contact-form form div{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 0.6rem;
+}
+.send-btn{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color:white;
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    border:none;
+    border-radius: 5px;
+    padding:0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.send-btn:hover{
+    opacity:0.8;
+
+}
+.contact-form > div img{
+    width:85% ;
+}
+.contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-footer{
+    padding: 2rem 0;
+    background: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+
+     
+}
+.contact-footer h3{
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.social-links{
+    display:flex;
+    justify-content: center;
+}
+
+.social-links a{
+   text-decoration: none;
+   width: 40px;
+   height: 40px;
+   color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin: 0.4rem;
+    transition:  all 0.4s ease;
+}
+.social-links a:hover{
+    color:rgb(120, 98, 186);
+    border-color: rgb(18,2,40);
+
+}
+

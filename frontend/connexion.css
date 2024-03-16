@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background:#fff;
+    
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+.login{
+    width: 800px;
+    min-height: 450px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 4px 20px 0 rgba(255, 39, 194, 0.5), 0 6px 20px 0 rgba(255, 39, 194, 0.5);
+}
+
+.content{
+    background: linear-gradient(to right,rgb(180, 115, 167),rgb(226,177,216));
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content img{
+    width: 75%;
+}
+
+.login-form{
+    flex-basis: 50%;
+    font-family: roboto;
+    padding: 25px;
+}
+
+.login-form{    
+        background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond transparente */
+        width:100%;
+        padding: 30px;
+}
+h1{
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color:linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+    text-align: center;
+}
+
+input[type=text],input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(18,2,40);
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+.input-box:focus{
+    border: 2px solid;
+    border-color:rgb(18,2,40);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(146,60,117);
+}
+a:hover{
+    text-decoration: underline;
+}
+
+input[type=submit] {
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    color: white;
+    font-size: large;
+    padding: 14px 20px;
+    margin: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px rgba(255, 39, 194,0.3);
+}
+
+input[type=submit]:hover {
+    background-color:rgb(146,60,117);
+    color: rgb(18,2,40) ;
+    border: 1px solid rgb(18,2,40);
+}
+
+input[type=submit]:active{
+    transform: scale(0.96);
+}
+
+/* Style pour les champs en erreur */
+.error {
+    border: 2px solid red;
+}

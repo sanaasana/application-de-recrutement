@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: sans-serif;
+}
+/*------section*/
+#nav-bar{
+    position:sticky;
+    top:0;
+    z-index:10;
+    
+    
+}
+/*-----------nav-----*/
+.navbar{
+  
+   
+    padding:0;
+     background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+ }
+ /*-------------le logo---*/
+.navbar-brand  h1 {
+    padding-left: 50px; /* l'espace de  logo  */
+    color:White;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 50px; 
+    text-shadow: 5px 5px 4px rgb(146,60,117);
+    
+    margin-right: 480px; /* l'espace entre logo et les autre items */
+
+}
+.logo{
+text-shadow: 5px 5px 7px rgb(146,60,117);
+font-size: 46px; 
+color:white;
+
+}
+/* -------------ul------------*/
+.navbar-nav {
+    margin-left: 80px;
+
+
+}
+/*--------------pour ul et li----------*/
+
+.navbar-nav li {
+    padding: 0  15px; /*  control spacing between nav items */
+   
+}
+/*--------------pour ul et li et a ----------*/
+.navbar-nav li a {
+    color: white;
+    font-weight: 600;
+   text-align: right;
+    
+}
+/* pour les effets */
+.navbar-nav li::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    display:block;
+    margin:auto;
+    transition:0.5s;
+  
+ }
+
+
+.navbar-nav li:hover::after
+ {
+    width:100%;
+   
+   
+ }
+
+ /*---------------banner style---------------*/
+ #banner{
+    height: 80vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/group-people-working-out-business-plan-office.jpg);
+    
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+}
+ 
+ 
+ /*-----------pour le style a lafin------------*/
+ 
+  /*-------titre-----------*/
+
+  .titre{
+   
+   /* color: rgb(255, 253, 208);*/
+    color: rgb(245, 245, 220);
+    
+    margin-left: 450px;
+    margin-bottom: 100px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:60px;
+    text-shadow: 6px 6px 7px white;
+  }
+
+
+
+
+
+
+
+
+.search-job{
+    padding: 30px;
+    margin: -50px 6% 50px;
+    background: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+}
+.search-job .form-control{
+    max-width: 250px;
+    display: inline-flex;
+    margin: 10px 5px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+.search-job .btn-primary{
+    
+    border: none;
+    border-radius: 20px;
+    display: inline-flex;
+    margin: 5px;
+    padding: 5px 20px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    box-shadow: 0 6px 15px 0 rgba(177, 151, 172,1);
+
+}
+
+#recruteurs img{
+    max-width: 100px;
+    margin: 10px 20px;
+}
+#recruteurs{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+/*****/
+#jobs{
+    background: #f8f8fa;
+    padding: 50px 0;
+}
+
+/******************************************************************/
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #bfacff 0%, #795fff 100%);
+}*/
+.container>h5{
+    margin-left: 110px;
+}
+.offres-container{ 
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex; /* Utilisez Flexbox */
+    flex-direction: column;  /*Alignez chaque offre verticalement */ 
+}
+
+.offre {
+    box-shadow: 0 2px 70px 0 rgba(110, 130, 208, .18 );
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin: 10px auto;
+}
+.offre:hover{
+    border: 1px solid #000000;  /*Bordure noire */
+}
+
+.left-section, .right-section {
+    flex: 1;
+}
+
+.company {
+    color: #333;
+    margin-top: 0;
+}
+
+.job-title {
+    color: #333;
+    margin-top: 0;
+}
+.job-title{
+    color:rgb(146,60,117);
+}
+
+.location {
+    color: #666;
+    margin-top: 0;
+}
+i .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+.description {
+    margin-top: 20px;
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.details ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.apply-button,.show-details {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.apply-button a{
+    text-decoration: none;
+    color: white;
+}
+
+.apply-button:hover {
+    transform: scale(0.96);
+
+}
+.show-details:hover {
+    transform: scale(0.96);
+}
+button:active{
+    transform: scale(0.96);
+}
+
+.left-section, .right-section {
+    flex: 1; /* Chaque section prend autant d'espace que possible */
+    padding: 0 10px; /* Ajoute un peu d'espace entre les sections */
+}
+
+.right-section{
+    float: right;
+    flex: 1;
+}
+
+
+.message-recherche{
+    color: #666;
+    padding-top: 60px;
+}

@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "inter" ,sans-serif;
+
+}
+ body { 
+    background-color:#f8f9fa;
+ }
+ /******** container de side bar*****/
+ .container{
+    width:100%;
+    min-height: 100vh;
+ }
+ .sidebar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:256px;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    background:linear-gradient(to right,rgb(185, 109, 154),rgb(146, 60, 117),rgb(107, 45, 85));
+    padding:24px; /* pour avoir un espace entre les borders et l'écriture*/
+    
+    transition: all 0.3s;
+    
+ }
+/* head de description****/
+ .sidebar .head {
+    display:flex;
+    gap:20px;
+    padding-bottom:20px;
+    border-bottom:2px  solid  rgb(245, 245, 220);   /*ligne verticale*/
+
+ }
+/* image */
+ .user-img{
+    width: 44px;
+    height:44px;
+    border-radius:50%;
+    overflow:hidden;
+
+ }
+
+ .user-img img{
+    width:100%;
+    object-fit:cover;
+ }
+ /*user details*/
+ .user-details .title , .menu .title {
+    font-size:10px;
+    font-weight: 500;
+    color :rgb(245, 245, 220);
+    text-transform: uppercase;
+    margin-bottom:10px;
+
+ }
+ .user-details .name{
+     font-size: 14px;
+     font-weight: 500;
+ }
+
+ /**navbar
+ .menu .title{
+            font-size:10px;
+            font-weight: 500;
+            color:#f8f9fa;
+            text-transform: uppercase;
+            margin-bottom:10px;
+
+ }*/
+/* les menu et leur liste**/
+ .menu ul li 
+ {
+    list-style:none;
+    margin-bottom:5px;
+ }
+ /*ajuster le look des lients*/
+ .menu ul li a{
+    font-size:14px;
+    font-weight: 500;
+    color :rgb(245, 245, 220);
+    text-decoration:none;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+ }
+ .menu ul li:hover a  {
+    color:rgb(245, 245, 220);
+    background-color: rgb(18,2,40);
+ }
+ .menu ul li .icon{
+    font-size: 20px;
+ }
+
+ /** pour chaque partie de menu */
+ .menu:not(:last-child) {
+    padding-bottom:10px;
+    margin-bottom:20px;
+    border-bottom:2px solid rgb(245, 245, 220);
+ }
+/*** pour séparer  accounts aux autres ***/
+.nav{
+    flex:1;
+}
+/* flèche de glisement*/
+.menu-btn{
+    position:absolute;
+    right: -14px;
+    top:3.5%;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    color:rgb(18,2,40);
+    border: 2px solid  rgb(245, 245, 220);
+    background-color: rgb(245, 245, 220);
+}
+.menu-btn:hover i{
+    color:rgb(18,2,40);
+}
+.menu-btn i{
+    transition: all 0.3s;
+
+}
+/*pour les effets*/
+.sidebar.active{
+    width: 92px ;
+}
+.sidebar.active .menu-btn i{
+    transform: rotate(180deg);
+}
+ /* pour la photo pour ne pas disparaître*/
+.sidebar.active .user-details{
+    display: none;
+}
+/* mouvement des title*/
+.sidebar.active .menu .title{
+     text-align: center;
+}
+/* pour les liens pour qu'on les laisse dans sidebar lorsque on fait un mvt left -right */
+.sidebar.active .menu > ul > li > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+} 
+/*pou rendre pparaître seulement les icons*/
+.sidebar.active .menu > ul > li > a .text{
+    position:absolute;
+    left: 70px;
+    top:50%;
+    transform: translateY(-50%);
+    padding:10px; 
+    border-radius:4px;
+    color :rgb(226,177,216);
+    background-color: rgb(18,2,40);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+/* pour les écritures qui vont apparaître*/
+.sidebar.active .menu > ul > li > a .text::after{
+    content:"";
+    position:absolute;
+    left:-5px;
+    top:20%;
+    width:20px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: rgb(18,2,40);
+    transform: rotate(45deg);
+z-index:-1;
+}
+.sidebar.active .menu > ul > li > a:hover .text{
+    left:50px;
+    opacity:1;
+    visibility: visible;
+
+}
+.containerg {
+    display: flex; /* Active Flexbox */
+}
+
+
+/***************************************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, var(--grey) 31px, transparent 1px) 50%, linear-gradient(180deg, var(--grey) 31px, var(--blue) 1px) 50%;
+  background-size: 32px 32px;
+  color: var(--dark);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GLOBAL STYLES */
+:root {
+	--blue: #335DFF;
+	--grey: #F5F5F5;
+	--grey-d-1: #EEE;
+	--grey-d-2: #DDD;
+	--grey-d-3: #888;
+	--white: #FFF;
+	--dark: #222;
+}
+/* GLOBAL STYLES */
+
+
+
+
+
+
+
+/* CHATBOX */
+.chatbox-wrapper {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	width: 4rem;
+	height: 4rem;
+}
+.chatbox-toggle {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+	color: var(--white);
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .2s;
+}
+.chatbox-toggle:active {
+	transform: scale(.9);
+}
+.chatbox-message-wrapper {
+	position: absolute;
+	bottom: calc(100% + 1rem);
+	right: 0;
+	width: 420px;
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.1);
+	transform: scale(0);
+	transform-origin: bottom right;
+	transition: .2s;
+}
+.chatbox-message-wrapper.show {
+	transform: scale(1);
+}
+.chatbox-message-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--white);
+	padding: .75rem 1.5rem;
+}
+.chatbox-message-profile {
+	display: flex;
+	align-items: center;
+	grid-gap: .5rem;
+}
+.chatbox-message-image {
+	width: 3rem;
+	height: 3rem;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.chatbox-message-name {
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+.chatbox-message-status {
+	font-size: .875rem;
+	color: var(--grey-d-3);
+}
+.chatbox-message-dropdown {
+	position: relative;
+}
+.chatbox-message-dropdown-toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 1.25rem;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.chatbox-message-dropdown-toggle:hover {
+	background: var(--grey);
+}
+.chatbox-message-dropdown-menu {
+	list-style: none;
+	margin: 0;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background: var(--white);
+	padding: .5rem 0;
+	width: 120px;
+	box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .1);
+	transform: scale(0);
+	transform-origin: top right;
+	transition: .2s;
+	border-radius: .5rem;
+}
+.chatbox-message-dropdown-menu.show {
+	transform: scale(1);
+}
+.chatbox-message-dropdown-menu a {
+	font-size: .875rem;
+	font-weight: 500;
+	color: var(--dark);
+	text-decoration: none;
+	padding: .5rem 1rem;
+	display: block;
+}
+.chatbox-message-dropdown-menu a:hover {
+	background: var(--grey);
+}
+.chatbox-message-content {
+	background: var(--grey);
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	grid-row-gap: 1rem;
+	max-height: 300px;
+	overflow-y: auto;
+}
+.chatbox-message-item {
+	width: 90%;
+	padding: 1rem;
+}
+.chatbox-message-item.sent {
+	align-self: flex-end;
+	background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+	color: var(--white);
+	border-radius: .75rem 0 .75rem .75rem;
+}
+.chatbox-message-item.received {
+	background: var(--white);
+	border-radius: 0 .75rem .75rem .75rem;
+	box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, .05);
+}
+.chatbox-message-item-time {
+	float:right;
+	font-size: .75rem;
+	margin-top: .5rem;
+	display: inline-block;
+}
+.chatbox-message-bottom {
+	background: var(--white);
+	padding: .75rem 1.5rem;
+}
+.chatbox-message-form {
+	display: flex;
+	align-items: center;
+	background: var(--grey);
+	border-radius: .5rem;
+	padding: .5rem 1.25rem;
+}
+.chatbox-message-input {
+	background: transparent;
+	outline: none;
+	border: none;
+	resize: none;
+	scrollbar-width: none;
+}
+.chatbox-message-input::-webkit-scrollbar {
+	display: none;
+}
+.chatbox-message-submit {
+	font-size: 1.55rem;
+	color: rgb(146,60,117) ;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	border-radius:10px;
+	margin-left: auto;	
+}
+.chatbox-message-no-message {
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+}
+/* CHATBOX */
+
+
+
+
+
+
+
+/* BREAKPOINTS */
+@media screen and (max-width: 576px) {
+	.chatbox-message-wrapper {
+		width: calc(100vw - 2rem);
+	}
+	.chatbox-wrapper {
+		bottom: 1rem;
+		right: 1rem;
+	}
+}
+/* BREAKPOINTS */

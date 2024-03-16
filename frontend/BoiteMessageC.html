@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="BoiteMessageC.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+crossorigin="anonymous"
+></script>
+	<title>Messagerie</title>
+</head>
+<body>
+
+
+
+
+    <div class="section1">
+        <div class="sidebar active">
+            <!--ajouter un bouton de glissement-->
+            <div class="menu-btn">
+                <i class="ph-bold ph-caret-left"></i>
+
+            </div>
+            <div class="head" >
+            <!-- image -->
+                <div class="user-img">
+                    <img src="Photo_B.jpeg" alt="">
+                </div>
+            <!-- les infos de candidat-->
+                <div class="user-details">
+                    <p class="title">
+                        Développeur web
+                    </p>
+                    <p class="name">
+                        ANAS Doe
+                    </p>
+                </div>
+                
+            </div>
+            <!--navbar-->
+            <div class="nav">
+                <div class="menu">
+                    <p class="title">Main</p>
+                        <ul>
+
+
+                            <li class="active"> 
+                                <a href="profileCandidat.html">
+                                    <i  class="icon ph-bold ph-user"></i>
+                                 <span class="text">PROFIL</span>
+                                </a>
+                            </li>
+
+                              <li > 
+                                <a href="offres.html">
+                                    <i  class="icon ph-bold ph-file-text"></i>
+                                 <span class="text"> Offres</span>
+                                </a>
+                            </li>
+
+
+                            <li > 
+                                <a href="BoiteMessageC.html" >
+                                    <i  class="icon ph-bold ph-chat-circle"></i>
+                                 <span class="text"> Boite Message </span>
+
+                                </a>
+                            </li>
+
+                            <li > 
+                                <a href="Formulaire.html" target="_blank">
+                                    <i  class="icon ph-bold ph-address-book"></i>
+                                 <span class="text">Postuler</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                
+
+                </div>
+
+                <div class="menu">
+                    <p class="title">Settings</p>
+                        <ul>
+
+
+                            <li > 
+                                <a href="corrige.html" target="_blank">
+                                    <i  class="icon ph-bold ph-house-simple"></i>
+                                 <span class="text">Home</span>
+                                </a>
+                            </li> 
+                        </ul>
+                </div>
+            </div>
+    <!-- pour accconts section -->        
+            <div class="menu">
+                <p class="title">Account</p>
+                    <ul>
+                        <li > 
+                            <a href="#">
+                                <i  class="icon ph-bold ph-info"></i>
+                             <span class="text">Help</span>
+                            </a>
+                        </li> 
+                        <li > 
+                            <a href="#">
+                                <i  class="icon ph-bold ph-sign-out"></i>
+                             <span class="text">Logout</span>
+                            </a>
+                        </li> 
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+	<div class="chatbox-wrapper">
+		<div class="chatbox-toggle">
+			<i class='bx bx-message-dots'></i>
+		</div>
+		<div class="chatbox-message-wrapper">
+			<div class="chatbox-message-header">
+				<div class="chatbox-message-profile">
+					<img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="chatbox-message-image">
+					<div>
+						<h4 class="chatbox-message-name">Utilisateur</h4>
+						<p class="chatbox-message-status">online</p>
+					</div>
+				</div>
+				<div class="chatbox-message-dropdown">
+					<i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+					<ul class="chatbox-message-dropdown-menu">
+						<li>
+							<a href="#">Search</a>
+						</li>
+						<li>
+							<a href="#">Report</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="chatbox-message-content">
+				<h4 class="chatbox-message-no-message">You don't have message yet!</h4>
+				<!-- <div class="chatbox-message-item sent">
+					<span class="chatbox-message-item-text">
+						Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+					</span>
+					<span class="chatbox-message-item-time">08:30</span>
+				</div>
+				<div class="chatbox-message-item received">
+					<span class="chatbox-message-item-text">
+						Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+					</span>
+					<span class="chatbox-message-item-time">08:30</span>
+				</div> -->
+			</div>
+			<div class="chatbox-message-bottom">
+				<form action="#" class="chatbox-message-form">
+					<textarea rows="1" placeholder="Message.." class="chatbox-message-input"></textarea>
+					<button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="BoiteMessageC.js"></script>
+</body>
+</html>

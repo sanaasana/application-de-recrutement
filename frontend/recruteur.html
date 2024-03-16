@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres d'emploi</title>
+    <link rel="stylesheet" href="recruteur.css">
+    <link rel="icon" href="imglogo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+<!-- icons-->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<!-- STYLESHEET-->
+
+<title> HireLink-Recruteur</title>
+</head>
+
+
+<body>
+    <!--Side Menu Bar-->
+<div class="containerg">
+                <div class="section1">
+                    <div class="sidebar active">
+                        <!--ajouter un bouton de glissement-->
+                        <div class="menu-btn">
+                            <i class="ph-bold ph-caret-left"></i>
+        
+                        </div>
+                        <div class="head" >
+                        <!-- image -->
+                            <div class="user-img">
+                                <img src="Photo_C.jpeg" alt="">
+                            </div>
+                        <!-- les infos de candidat-->
+                            <div class="user-details">
+                                <p class="title">
+                                    Designer
+                                </p>
+                                <p class="name">
+                                    Sara Gray
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <!--navbar-->
+
+                        <div class="nav">
+                            <div class="menu">
+                                <p class="title">Main</p>
+
+                                    <ul>
+        
+                                        <li class="active"> 
+                                            <a href="profileRecruteur.html">
+                                                <i  class="icon ph-bold ph-user"></i>
+                                             <span class="text">Profile</span>
+                                            </a>
+                                        </li>
+        
+
+                                          <li > 
+                                            <a href="offres.html">
+                                                <i  class="icon ph-bold ph-file-text"></i>
+                                             <span class="text"> Offres</span>
+                                            </a>
+                                        </li>
+
+                                        <li > 
+                                            <a href="Candidature.html">
+                                                <i  class="icon ph-bold ph-file-text"></i>
+                                             <span class="text"> Candidature</span>
+                                            </a>
+                                        </li>
+                                        
+        
+                                        <li > 
+                                            <a href="BoiteMessageR.html">
+                                                <i  class="icon ph-bold ph-chat-circle"></i>
+                                             <span class="text">Boite Message </span>
+        
+                                            </a>
+                                        </li>
+        
+                                        <li>
+                                            <a  href="DeposerOffres.html" target="_blank"  onclick="ajouterOffre()">
+                                                <i class=" icon ph ph-plus"></i>
+                                                <span class="text">ajouter offre</span>
+                                            </a>
+                                        </li>
+        
+                                    </ul>
+        
+                            
+        
+                            </div>
+        
+                            <div class="menu">
+                                <p class="title">Settings</p>
+                                    <ul>
+                                        <li > 
+                                            <a href="corrige.html">
+                                                <i  class="icon ph-bold ph-house-simple"></i>
+                                             <span class="text">Home</span>
+                                            </a>
+                                        </li> 
+                                    </ul>
+                            </div>
+                        </div>
+
+                          <!-- pour accconts section -->        
+                        <div class="menu">
+                            <p class="title">Account</p>
+                                <ul>
+                                    <li > 
+                                        <a href="#">
+                                            <i  class="icon ph-bold ph-info"></i>
+                                         <span class="text">Help</span>
+                                        </a>
+                                    </li> 
+                                    <li > 
+                                        <a href="#">
+                                            <i  class="icon ph-bold ph-sign-out"></i>
+                                         <span class="text">Logout</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+   
+    <!-- bodyyyy-->
+   
+    <div class="container2 container">
+        <div class="content">
+            <h1 class="titre">Créer une offre d'emploi</h1>
+            <button class="ajout-button" onclick="ajouterOffre()"><a href="DeposerOffres.html" ><i class="fas fa-edit"></i><b>Publier une offre d'emploi</b></a></button>
+        </div>
+
+        <div class="content2">
+        <img src="images/12085241_20944050.jpg">
+        </div>
+
+    </div>
+   </div>
+    <!---->
+    <!--<div class="container">
+        <div class="content">
+            <div class="titre1">
+                <h2>Les annonces d'emploi que vous avez publiée</h2>
+            </div> <br>
+            <div class="sidebar">
+            <button class="ajout-button"><a href="DeposerOffres.html" onclick="ajouterOffre()"><b>➕Ajouter une offre</b></a></button>  
+            <button class="profil-button"><a href="profile.html"><b>👤Profil</b></a></button>  
+            </div> 
+        
+            <div class="offres-container"></div>
+        </div>
+        
+    </div>
+-->
+<section id="jobs">
+    <div class="container">
+        <div class="titre1">
+            <h2>Offres déposées</h2>
+        </div> 
+            <div class="offres-container">
+            <div class="offre">
+                <div class="left-section">
+                    <h3 class="job-title"><b>Titre du poste</b></h3>
+                    <h4 class="company">Nom de l'entreprise</h4>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Lieu</p> <br>
+                    <p class="date">Posté le 06-03-2024</p>
+                </div>
+                <div class="right-section">
+                    <p class="description">Description de l'offre Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Distinctio, possimus omnis eum doloribus 
+                        repellendus nihil obcaecati nobis impedit animi beatae!</p>
+                    <div class="details hidden">
+                        <h5>Responsabilités :</h5>
+                        <ul>
+                            <p></p>
+                        </ul>
+                        <h5>Exigences :</h5>
+                        <ul>
+                            <p></p>
+                        </ul>
+                    </div>
+                    <button class="show-details">PLUS</button>
+                    <button class="modify-button" onclick="retour()" >Modifier</button>
+                    <button class="delete-button" onclick="supprimerOffre()">Supprimer</button>
+                </div>
+            </div> 
+            
+            </div> 
+    </div> 
+</section>
+
+
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+crossorigin="anonymous"
+></script>
+        <script src="recruteur.js"></script>
+
+
+
+
+    
+    <script>
+         function supprimerOffre(index) {
+    var offres = JSON.parse(localStorage.getItem('offres')) || [];
+    if (offres[index]) {
+        offres.splice(index, 1); // Supprime l'offre du tableau
+        localStorage.setItem('offres', JSON.stringify(offres)); // Met à jour le stockage local
+        location.reload(); // Recharge la page pour refléter les changements
+    } else {
+        console.error("Offre non trouvée avec l'index :", index);
+    }
+}
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Récupérer les offres depuis le stockage local
+        var offres = JSON.parse(localStorage.getItem('offres')) || [];
+
+        // Sélectionner la section des offres
+        var offresContainer = document.querySelector('.offres-container');
+
+        // Parcourir toutes les offres et les afficher
+        offres.forEach(function(offre, index) {
+
+            // Obtenez la date actuelle
+            var currentDate = new Date();
+            // Formattez la date
+            var formattedDate = currentDate.toLocaleDateString();
+
+            var offreElement = document.createElement('div');
+            offreElement.classList.add('offre');
+            offreElement.innerHTML = `
+            
+            
+            <div class="left-section">
+                        <h3 class="job-title"> <b><span>${offre.poste}</span></b></h3>
+                        <h4 class="company"><span>${offre.entreprise}</span></h4> 
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> <span> ${offre.Lieu}</span></p> <br>
+                        <p class="date"><span>Posté le ${formattedDate}</span></p>
+                    </div>
+                    <div class="right-section">
+                        <p class="description"><span>${offre.descrip}</span></p>
+                        <div class="details hidden">
+                            <h5>Responsabilités :</h5> <br>
+                            <ul>
+                                <span>${offre.Responsabilites}</span>
+                            </ul> <br>
+                            <h5>Exigences :</h5> <br>
+                            <ul>
+                                <span>${offre.Exigences}</span>
+                            </ul>
+                        </div>
+            <button class="show-details">PLUS</button>
+            <button class="modify-button" onclick="retour()">Modifier</button>
+            <button class="delete-button" onclick="supprimerOffre(${index})">Supprimer</button>
+        </div> 
+    
+            `;
+            offresContainer.appendChild(offreElement);
+
+            // Sélectionner les boutons "PLUS" et les sections de détails à l'intérieur de chaque offre
+            var showDetailsButton = offreElement.querySelector('.show-details');
+            var detailsSection = offreElement.querySelector('.details');
+
+            // Ajouter un gestionnaire d'événements à chaque bouton "PLUS"
+            showDetailsButton.addEventListener('click', function() {
+                detailsSection.classList.toggle('hidden');
+                if (detailsSection.classList.contains('hidden')) {
+                    showDetailsButton.textContent = 'PLUS';
+                } else {
+                    showDetailsButton.textContent = 'MOINS';
+                }
+            });
+        });
+    });
+
+        function retour() {
+            window.history.back(); // Retourne à la page précédente
+        }
+
+    </script>
+</body>
+</html>

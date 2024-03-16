@@ -1,0 +1,124 @@
+/* Définit la police de caractères et la couleur de fond pour tout le corps du document HTML */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,rgb(146,60,117),rgb(180, 115, 167),rgb(226,177,216));
+
+}
+
+/* Style pour les titres de niveau 1 */
+h1 {
+    text-align: center; /* Centre le texte */
+    font-size:40px; /* Définit la taille de la police */
+    /* Crée un dégradé de couleur pour le texte */
+    background-image:linear-gradient(43deg,rgb(158, 29, 115)  40%,rgb(41, 83, 175)  100%,rgb(117, 81, 156)  80%);
+    -webkit-background-clip : text; /* Permet au dégradé de se conformer à la forme du texte */
+    color:transparent; /* Rend le texte transparent */
+}
+
+/* Style pour le formulaire */
+form {
+    width: 69%; /* Définit la largeur du formulaire à 80% de la largeur de l'écran */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    background-color: #fff; /* Définit la couleur de fond du formulaire */
+    border-radius: 10px; /* Arrondit les coins du formulaire */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre au formulaire */
+    padding: 30px; /* Ajoute un remplissage de 30px à l'intérieur du formulaire */
+}
+
+/* Style pour les groupes de champs du formulaire */
+fieldset {
+    border: 1px solid rgb(53, 7, 34); /* Définit la bordure des groupes de champs */
+    padding: 10px; /* Ajoute un remplissage de 10px à l'intérieur des groupes de champs */
+    margin-bottom: 25px; /* Ajoute une marge en bas de 25px aux groupes de champs */
+    border-radius: 5px; /* Arrondit les coins des groupes de champs */
+}
+
+/* Style pour les légendes des groupes de champs */
+legend {
+    font-weight:bold; /* Rend le texte en gras */
+    color:rgb(58, 10, 38); /* Définit la couleur du texte */
+    font-size:20px; /* Définit la taille de la police */
+    text-shadow: 0px 1px 1px; /* Ajoute une légère ombre au texte */
+}
+
+/* Style pour les libellés des champs du formulaire */
+label {
+    display: block; /* Affiche les libellés en tant que blocs */
+    margin-bottom:5px; /* Ajoute une marge en bas de 5px aux libellés */
+    color:rgb(146,60,117); /* Définit la couleur du texte */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Définit la police de caractères */
+}
+
+/* Style pour les conteneurs flexibles utilisés pour aligner les libellés et les champs de saisie sur la même ligne */
+.for {
+    display: flex; /* Affiche les éléments en tant que conteneurs flexibles */
+}
+
+/* Styles spécifiques pour les champs de saisie de type "textarea" pour le profil et la description */
+#profil, #description {
+    height:90px; /* Définit la hauteur des champs de saisie */
+}
+
+/* Styles généraux pour les champs de saisie et les zones de texte */
+input[type="text"],
+input[type="date"],
+input[type="numero"],
+input[type="file"],
+textarea {
+    width: 100%; /* Définit la largeur des champs de saisie à 100% */
+    padding: 8px; /* Ajoute un remplissage de 8px à l'intérieur des champs de saisie */
+    margin-bottom: 20px; /* Ajoute une marge en bas de 20px aux champs de saisie */
+    border: 1px solid #ccc; /* Définit la bordure des champs de saisie */
+    border-radius: 5px; /* Arrondit les coins des champs de saisie */
+    box-sizing: border-box; /* Définit la boîte de modélisation pour inclure le remplissage et la bordure */
+}
+
+/* Style pour les cases à cocher */
+input[type="checkbox"] {
+    margin-right: 5px; /* Ajoute une marge à droite de 5px aux cases à cocher */
+}
+
+/* Style pour les boutons de soumission du formulaire */
+input[type="submit"] {
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39)); /* Ajoute un dégradé de couleur en arrière-plan */
+    color: white; /* Définit la couleur du texte */
+    padding: 10px 20px; /* Ajoute un remplissage de 10px en haut et en bas, et de 20px à gauche et à droite */
+    border: none; /* Supprime la bordure du bouton */
+    border-radius: 20px; /* Arrondit les coins du bouton */
+    cursor: pointer; /* Définit le curseur de la souris sur "pointer" */
+    float:right; /* Aligne le bouton à droite */
+}
+
+/* Style pour les boutons de soumission du formulaire au survol */
+input[type="submit"]:hover {
+    box-shadow:1px 2px 7px rgb(145, 47, 109); /* Ajoute une légère ombre au bouton au survol */
+}
+
+/* Style pour les lignes horizontales */
+hr {
+    margin-top:-7px; /* Déplace la ligne horizontale vers le haut de 7px */
+    margin-bottom:40px; /* Ajoute une marge en bas de 40px à la ligne horizontale */
+}
+
+/* Style pour les éléments de type div */
+div {
+    width:100%; /* Définit la largeur des éléments div à 100% */
+    margin:4px; /* Ajoute une marge de 4px autour des éléments div */
+}
+
+/* Style pour le conteneur du bouton "Envoyer formulaire" */
+.Envoyer {
+    width:fit-content; /* Ajuste la largeur au contenu */
+    margin: 0 auto; /* Centre l'élément horizontalement */
+    text-align: center; /* Centre le contenu du conteneur */
+}
+#Envoyer{
+    width:400px;
+}
+
+input:focus-within {
+    outline: 1px solid rgb(158, 29, 115); /* Changer la couleur de mise en évidence en bleu */
+}
+textarea:focus-within {
+    outline: 1px solid rgb(158, 29, 115); /* Changer la couleur de mise en évidence en bleu */
+}

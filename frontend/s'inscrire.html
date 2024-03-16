@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="S'inscrire.css">
+    <link rel="icon" href="imglogo.jpeg" type="image/x-icon">
+    <title>S'inscrire</title>
+</head>
+<body>
+    <div class="container">
+        <div class="signupCandidat-signupRecruteur">
+            <form action="" class="sign-up-candidat-form" onsubmit="return validatePasswords()">
+                <h3 class="title1">Candidat</h3>
+                <h2 class="title">S'inscrire</h2>
+                <label class="text"><b>E-mail</b></label> <br>
+                <div class="input-field">
+                    <input  type="email" placeholder="Entrer votre adresse e-mail" name="email" required>
+                </div>
+                <label class="text"><b>Mot de passe</b></label> <br>
+                <div class="input-field">
+                    <input type="password" placeholder="Entrer votre mot de passe" name="password" required>
+                </div>
+                <label class="text"><b>Confirmation du mot de passe</b></label> <br>
+                <div class="input-field">
+                    <input type="password" placeholder="Confirmez votre mot de passe" name="confirm_password" required>
+                </div>
+                <input type="submit" value='Accepter et S’inscrire' class="btn">
+                <p class="sign-in-text">Déjà inscrit(e) ? <a href="connexion.html">Se connecter</a></p>
+                <p class="account-text">Êtes-vous un <b>recruteur</b>? <a href="#" id="sign-up-recruteur-btn2">S'inscrire</a></p>
+            </form>
+
+            <form action="" class="sign-up-recruteur-form" onsubmit="return validatePasswords()">
+                <h3 class="title1">Recruteur</h3>
+                <h2 class="title">S'inscrire</h2>
+                <label class="text"><b>Nom de l'entreprise</b></label> <br>
+                <div class="input-field">
+                    <input  type="text" placeholder="Entrer nom de l'entreprise" name="company" required>
+                </div>
+                <label class="text"><b>E-mail</b></label> <br>
+                <div class="input-field">
+                    <input  type="email" placeholder="Entrer votre adresse e-mail" name="email" required>
+                </div>
+                <label class="text"><b>Mot de passe</b></label> <br>
+                <div class="input-field">
+                    <input type="password" placeholder="Entrer votre mot de passe" name="password" required>
+                </div>
+                <label class="text"><b>Confirmation du mot de passe</b></label> <br>
+                <div class="input-field">
+                    <input type="password" placeholder="Confirmez votre mot de passe" name="confirm_password" required>
+                </div>
+                <input type="submit" value='Accepter et S’inscrire' class="btn">
+                <p class="sign-in-text">Déjà inscrit(e) ? <a href="connexion.html">Se connecter</a></p>
+                <p class="account-text">Êtes-vous un <b>candidat</b>? <a href="#" id="sign-up-candidat-btn2">S'inscrire</a></p>
+                
+            </form>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Êtes-vous un candidat?</h3>
+                    <p>En tant que candidat, vous avez la possibilité de présenter vos compétences, vos expériences et votre potentiel à des employeurs potentiels.</p>
+                    <button class="btn btn-s" id="sign-up-candidat-btn">Candidat</button>
+                </div>
+                <img src="images1/undraw_join_re_w1lh.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Êtes-vous un recruteur?</h3>
+                    <p>En tant que recruteur, vous aurez la responsabilité de rechercher les candidats les plus qualifiés pour les postes vacants au sein de votre organisation.</p>
+                    <button class="btn btn-s" id="sign-up-recruteur-btn">Recruteur</button>
+                </div>
+                <img src="images1/undraw_sign_up_n6im.svg" alt="" class="image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sign_up_candidat_btn = document.querySelector("#sign-up-candidat-btn");
+        const sign_up_recruteur_btn = document.querySelector("#sign-up-recruteur-btn");
+        const container = document.querySelector(".container");
+        const sign_up_candidat_btn2 = document.querySelector("#sign-up-candidat-btn2");
+        const sign_up_recruteur_btn2 = document.querySelector("#sign-up-recruteur-btn2");
+        sign_up_recruteur_btn.addEventListener("click", () => {
+            container.classList.add("sign-up-mode");
+        });
+        sign_up_candidat_btn.addEventListener("click", () => {
+            container.classList.remove("sign-up-mode");
+        });
+        sign_up_recruteur_btn2.addEventListener("click", () => {
+            container.classList.add("sign-up-mode2");
+        });
+        sign_up_candidat_btn2.addEventListener("click", () => {
+            container.classList.remove("sign-up-mode2");
+        });
+
+        
+        
+        function validatePasswords() {
+        var password = document.querySelector('.sign-up-candidat-form input[name="password"]');
+        var confirmPassword = document.querySelector('.sign-up-candidat-form input[name="confirm_password"]');
+        var password = document.querySelector('.sign-up-recruteur-form input[name="password"]');
+        var confirmPassword = document.querySelector('.sign-up-recruteur-form input[name="confirm_password"]');
+
+        
+        if (password.value !== confirmPassword.value) {
+            confirmPassword.classList.add('error'); // Ajoute la classe 'error' au champ de confirmation de mot de passe
+            //alert("Les mots de passe ne correspondent pas !");
+            return false;
+        } else {
+            confirmPassword.classList.remove('error'); // Supprime la classe 'error' du champ de confirmation de mot de passe
+        }
+
+        return true;
+        }
+    </script>
+
+</body>
+</html>

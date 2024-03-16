@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: sans-serif;
+}
+/*------section*/
+#nav-bar{
+    position:sticky;
+    top:0;
+    z-index:10;
+    
+    
+}
+/*-----------nav-----*/
+.navbar{
+  
+   
+    padding:0;
+     background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+ }
+ /*-------------le logo---*/
+.navbar-brand  h1 {
+    padding-left: 50px; /* l'espace de  logo  */
+    color:White;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 50px; 
+    text-shadow: 5px 5px 4px rgb(146,60,117);
+    
+    margin-right: 480px; /* l'espace entre logo et les autre items */
+
+}
+.logo{
+text-shadow: 5px 5px 7px rgb(146,60,117);
+font-size: 46px; 
+color:white;
+
+}
+/* -------------ul------------*/
+.navbar-nav {
+    margin-left: 80px;
+
+
+}
+/*--------------pour ul et li----------*/
+
+.navbar-nav li {
+    padding: 0  15px; /*  control spacing between nav items */
+   
+}
+/*--------------pour ul et li et a ----------*/
+.navbar-nav li a {
+    color: white;
+    font-weight: 600;
+   text-align: right;
+    
+}
+/* pour les effets */
+.navbar-nav li::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    display:block;
+    margin:auto;
+    transition:0.5s;
+  
+ }
+
+
+.navbar-nav li:hover::after
+ {
+    width:100%;
+   
+   
+ }
+
+ /*---------------banner style---------------*/
+ #banner{
+    background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+    color: white;
+    padding-top: 5%;
+ }
+ 
+ 
+ /*-----------pour le style a lafin------------*/
+ .bottom-img{
+    width:100%;
+ }
+ 
+  /*-------titre-----------*/
+
+  .titre{
+   
+   /* color: rgb(255, 253, 208);*/
+    color: rgb(245, 245, 220);
+    
+    margin-left: 450px;
+    margin-bottom: 100px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:60px;
+    text-shadow: 6px 6px 7px white;
+  }
+
+
+/*--------------------la description et les images-----------------*/
+ #about-us
+{
+    background: #f8f9fa;
+    padding-bottom:50px;
+    padding-top:50px;
+    
+
+
+}
+
+/*-----------titre-------------*/
+.about-title
+{
+    font-size: 60px;
+    font-weight:600 ;
+    margin-top:8%;
+}
+/*----------------- section de paragraphe---------*/
+
+#about-us .about-parag 
+{
+    margin-left: 20px;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    text-align: justify
+}
+/*-------footer-----*/
+#footer{
+    background: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+    color:white;
+  
+}
+/*-------pourwave-------*/
+.footer-img{
+    width:100%;
+}
+.footer-box h1
+{ 
+    width: 120px;
+    margin-bottom: 20px;
+    
+}
+/*----------------les mots des  icons-----------------*/
+ .paragfooter{
+    margin-left:180px;
+}
+/*---------------lien de contactus-------------*/
+.footer-box a
+{
+    text-decoration: none;
+    color:white;
+}
+.footer-box a:hover{
+    color:rgb(255,199,39);
+    text-decoration: underline;
+}
+/*-----------pour les icons*/
+.footer-box .fa{
+    margin-right: 8px;
+    font-size: 10px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+}
+
+/*-------------copyright et pied de page -------------*/
+
+
+hr{
+    background-color:white;
+ 
+
+}
+.copyright{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}

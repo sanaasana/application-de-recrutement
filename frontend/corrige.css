@@ -1,0 +1,371 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: sans-serif;
+   
+}
+/*------section*/
+#nav-bar{
+    position:sticky;
+    top:0;
+    z-index:10;
+    
+    
+}
+/*-----------nav-----*/
+.navbar{
+  
+   
+    padding:0;
+     background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+ }
+ /*-------------le logo---*/
+.navbar-brand  h1 {
+    padding-left: 50px; /* l'espace de  logo  */
+    color:White;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 50px; 
+    text-shadow: 5px 5px 4px rgb(146,60,117);
+    
+    margin-right: 480px; /* l'espace entre logo et les autre items */
+
+}
+.logo{
+text-shadow: 5px 5px 7px rgb(146,60,117);
+font-size: 46px; 
+color:white;
+
+}
+/* -------------ul------------*/
+.navbar-nav {
+    margin-left: 80px;
+
+
+}
+/*--------------pour ul et li----------*/
+
+.navbar-nav li {
+    padding: 0  15px; /*  control spacing between nav items */
+   
+}
+/*--------------pour ul et li et a ----------*/
+.navbar-nav li a {
+    color: white;
+    font-weight: 600;
+   text-align: right;
+    
+}
+/* pour les effets */
+.navbar-nav li::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    display:block;
+    margin:auto;
+    transition:0.5s;
+  
+ }
+
+
+.navbar-nav li:hover::after
+ {
+    width:100%;
+   
+   
+ }
+ /*------------ for the bar icon-------*/
+ .fa-bars{
+    color:white;
+    font-size:30px;
+ }
+ /*-----------button-----------*/
+ .navbar-toggler{
+    outline: none ;
+ }
+ /*--------------------------banner section---------------*/
+ 
+ 
+ #banner{
+    background-image: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+    color: white;
+    padding-top: 5%;
+ }
+ .promo-title{
+    font-size:40px;
+    font-weight:600;
+    margin-top: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+ }
+ 
+ /*-----------pour le style a lafin------------*/
+ .bottom-img{
+    width:100%;
+ }
+ .parag-home{
+    font-size:20px;
+
+ }
+ /*---------pour le mot hirelink-------------*/
+ .paragbanner
+ {
+    color: rgb(255,199,39);
+    font-family: Monospace;
+    font-weight: thin;
+    font-size: 21px;
+    text-decoration:none ;
+} 
+/*-----------pour le link de hirelink-----------*/
+.paragbanner:hover {
+   
+   color:rgb(55,71,79);
+   text-decoration: underline;
+   font-weight: bold;
+
+}
+/*------------------------pour le service --------------*/
+/*---------section-----*/
+#services
+ {
+    padding: 80px 0  ;
+
+}
+/*--------------img-----*/
+.service-img
+{
+    width:100px;
+    margin-top:20px;
+    border-radius:15px;
+}
+/*-----------parag de chaque image*/
+.paragSection
+{
+   
+    font-size:medium;
+    
+
+}
+
+/*--------class de div qui contient l'image et parag--------*/
+.services
+{
+    padding: 20px;
+ 
+
+
+}
+/*------pour ajuster les espaces entre img et titre---*/
+.services h4 
+{
+    padding:5px;
+    margin-top:25px;
+    text-transform: uppercase;
+} 
+/*----------- les effets sur le titre de nos services---------*/
+.title::before {
+    content:'';
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    height: 5px;
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    transform:translateY(63px);
+}
+.title::after{
+    content:'';
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+    height: 10px;
+    width:50px;
+    margin-left:auto;
+    margin-bottom: 40px;
+    margin-right:auto;
+    display:block;
+    transform:translateY(8px);
+}
+/*-------------------pour le boutton--------------*/
+#services .btn-primary
+{
+   
+    padding:8px 25px;
+    border:none;
+    border-radius: 20px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+   
+    box-shadow: 0 4px 6px 0 rgba(255,39,194,0.2); /* Ajoute une ombre */
+  }
+
+
+  #services .btn-primary a{
+    text-decoration: none;
+    color: white;
+}
+#services .btn-primary:hover{
+    box-shadow: 0 6px 15px 0 rgba(255, 39, 194, 0.3); /* Ombre plus grande au survol */
+}
+ 
+
+   
+
+
+/*----------------------About us section--------------------*/
+#about-us
+{
+    background: #f8f9fa;
+    padding-bottom:50px;
+    padding-top:50px;
+    
+
+
+}
+
+/*-----------paragraphe de pourquoi on est différent-------------*/
+.about-title
+{
+    font-size: 40px;
+    font-weight:600 ;
+    margin-top:8%;
+}
+/*----------------- section et ul et li ---------*/
+#about-us ul li{
+    margin :10px 0;
+}
+#about-us ul
+{
+    margin-left: 20px;
+}
+/*-------------li-----------*/
+ #about-us li
+{
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    text-align: justify;
+}
+
+#about-us .btn-primary
+{
+  
+    padding:8px 25px;
+    border:none;
+    box-shadow: 0 4px 6px 0  rgba(255, 39, 194,0.2); /* Ajoute une ombre */
+    
+    border-radius: 20px;
+    background:linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+}
+#about-us .btn-primary a{
+    text-decoration: none;
+    color: white;
+}
+#about-us .btn-primary:hover{
+    box-shadow: 0 6px 15px 0 rgba(255, 39, 194,0.3); /* Ombre plus grande au survol */
+}
+/*----------------------feedback-------------*/
+#FEEDBACK{
+    margin : 100px 0 ;
+}
+/*------------------les avis des personnes-----------------*/
+.FEEDBACK 
+{
+     border-left: 4px solid rgb(146,60,117) ;
+     margin-top: 50px;
+     margin-bottom: 50px;
+}
+.FEEDBACK img
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin:0 10px;
+
+}
+.user-details
+{
+    display:inline-block;
+    font-size:12px ;
+}
+/*----------------------socialmedia-----------*/
+#social-media{
+    background:#f8f9fa ;
+    padding:100px 0;
+}
+#social-media p
+{
+    font-size:36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+
+}
+/*-----------------les icons----------------*/
+.social-icons img{
+    width:60px;
+    transition: 0.5s;
+
+}
+.social-icons a:hover img{
+    
+    transform:translateY(-10px);
+}
+/*-------------------footersection----------------*/
+#footer{
+    background: linear-gradient(to right, rgb(18,2,40),rgb(146,60,117));
+    color:white;
+  
+}
+/*-------pourwave-------*/
+.footer-img{
+    width:100%;
+}
+/*-----------qui contientl les infos------------*/ 
+.footer-box{
+    padding: 20px;
+    
+  
+}
+.footer-box h1
+{ 
+    width: 120px;
+    margin-bottom: 20px;
+    
+}
+/*----------------les mots des  icons-----------------*/
+ .paragfooter{
+    margin-left:180px;
+}
+/*---------------lien de contactus-------------*/
+.footer-box a
+{
+    text-decoration: none;
+    color:white;
+}
+.footer-box a:hover{
+    color:rgb(255,199,39);
+    text-decoration: underline;
+}
+/*-----------pour les icons*/
+.footer-box .fa{
+    margin-right: 8px;
+    font-size: 10px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39));
+}
+/*-------copyright--------*/
+
+hr{
+    background-color:white;
+ 
+
+}
+.copyright{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
