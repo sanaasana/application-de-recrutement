@@ -43,15 +43,14 @@
             <button type="button" onclick="poster()">Poster</button>
         </form>
     </div>
-   
-    <script>
-        function poster() {
-        var entreprise = document.getElementById("entreprise").value;
-        var poste = document.getElementById("poste").value;
-        var descrip = document.getElementById("descrip").value;
-        var Responsabilites = document.getElementById("Responsabilites").value;
-        var Exigences = document.getElementById("Exigences").value;
-        var Lieu = document.getElementById("Lieu").value;
+ <script>  
+    function poster() {
+            var entreprise = document.getElementById("entreprise");
+            var poste = document.getElementById("poste");
+            var descrip = document.getElementById("descrip");
+            var Responsabilites = document.getElementById("Responsabilites");
+            var Exigences = document.getElementById("Exigences");
+            var Lieu = document.getElementById("Lieu");
             
             // Vérifier si chaque champ est vide
             if (entreprise.value.trim() === '') {
@@ -83,12 +82,12 @@
             
             // Créer un objet d'offre
             var offre = {
-            entreprise: entreprise,
-            poste: poste,
-            descrip: descrip,
-            Responsabilites: Responsabilites,
-            Exigences: Exigences,
-            Lieu: Lieu
+                entreprise: entreprise.value,
+                poste: poste.value,
+                descrip: descrip.value,
+                Responsabilites: Responsabilites.value,
+                Exigences: Exigences.value,
+                Lieu: Lieu.value
             };
 
             // Stocker l'objet d'offre dans le stockage local
