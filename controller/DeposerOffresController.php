@@ -1,6 +1,6 @@
 <?php
 // Inclure le fichier de configuration de la base de données
-include '../config/database.php';
+include '../racine/config.php';
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
