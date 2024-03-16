@@ -59,6 +59,7 @@ label {
     height:90px; /* Définit la hauteur des champs de saisie */
 }
 
+
 /* Styles généraux pour les champs de saisie et les zones de texte */
 input[type="text"],
 input[type="date"],
@@ -79,7 +80,7 @@ input[type="checkbox"] {
 }
 
 /* Style pour les boutons de soumission du formulaire */
-input[type="submit"] {
+input[type="button"] {
     background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39)); /* Ajoute un dégradé de couleur en arrière-plan */
     color: white; /* Définit la couleur du texte */
     padding: 10px 20px; /* Ajoute un remplissage de 10px en haut et en bas, et de 20px à gauche et à droite */
@@ -90,7 +91,7 @@ input[type="submit"] {
 }
 
 /* Style pour les boutons de soumission du formulaire au survol */
-input[type="submit"]:hover {
+input[type="button"]:hover {
     box-shadow:1px 2px 7px rgb(145, 47, 109); /* Ajoute une légère ombre au bouton au survol */
 }
 
@@ -121,4 +122,19 @@ input:focus-within {
 }
 textarea:focus-within {
     outline: 1px solid rgb(158, 29, 115); /* Changer la couleur de mise en évidence en bleu */
+}
+  /* Style pour les boutons de soumission du formulaire */
+input[type="submit"] {
+    background: linear-gradient(to right, rgb(120, 98, 186),rgb(146,60,117),rgb(255,199,39)); /* Ajoute un dégradé de couleur en arrière-plan */
+    color: white; /* Définit la couleur du texte */
+    padding: 10px 20px; /* Ajoute un remplissage de 10px en haut et en bas, et de 20px à gauche et à droite */
+    border: none; /* Supprime la bordure du bouton */
+    border-radius: 20px; /* Arrondit les coins du bouton */
+    cursor: pointer; /* Définit le curseur de la souris sur "pointer" */
+    float:right; /* Aligne le bouton à droite */
+}
+
+
+input[type="submit"]:hover {
+    box-shadow:1px 2px 7px rgb(145, 47, 109); /* Ajoute une légère ombre au bouton au survol */
 }

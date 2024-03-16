@@ -40,45 +40,45 @@
 <textarea  name="my_textarea" rows="5" cols="50" placeholder="Donner une description de votre profil..">
 </textarea>
 </fieldset>
-<fieldset>
-<legend><strong> Formation </strong></legend>
-<div  class="for">
-<div>
-<label for="diplomeObtenu" > Diplôme Obtenu</label>
-<input type="text" id="diplomeObtenu" name="diplomeObtenu" placeholder="diplôme Obtenu"><br>
-</div>
-<div>
-<label for="Etablissement_d'enseignement" > Etablissement d'enseignement </label>
-<input type="text" id="Etablissement_d'enseignement" name="Etablissement_d'enseignement" placeholder="Etablissement d'enseignement"><br>
-</div>
-</div>
-<div  class="for">
+<fieldset >
+    <legend><strong>Formation</strong></legend>
+    <div class="for" id="formationFieldset">
+        <div>
+            <label for="diplomeObtenu">Diplôme Obtenu</label>
+            <input type="text" id="diplomeObtenu" name="diplomeObtenu" placeholder="Diplôme Obtenu"><br>
+        </div>
+        <div>
+            <label for="Etablissement_d'enseignement">Etablissement</label>
+            <input type="text" id="Etablissement_d'enseignement" name="Etablissement_d'enseignement" placeholder="Etablissement d'enseignement"><br>
+        </div>
     <div>
-<label for="Date_début" > Date de début </label>
-<input type="date" id="Date_début" name="Date_début" ><br>
-</div>
-<div>
-<label for="Date_fin" > Date de fin </label>
-<input type="date" id="Date_fin" name="Date_fin"><br>
-</div>
-</div>
-
-<input type="submit" value="Ajouter Formation"/>
+   
+        
+            <label for="Date_début">Date de début</label>
+            <input type="date" id="Date_début" name="Date_début"><br>
+     </div>   
+        <div>
+            <label for="Date_fin">Date de fin</label>
+            <input type="date" id="Date_fin" name="Date_fin"><br>
+        </div>
+    </div>
+    <input type="button" value="Ajouter Formation" onclick="ajouterFormation()">
 </fieldset>
 
+
+
 <fieldset>
-<legend> <strong> Expériences Professionnelle</strong></legend>
-<div  class="for">
+<legend><strong> Expériences Professionnelle</strong></legend>
+<div  class="for"  id="ExperienceFieldset">
     <div>
-<label for="titre_poste" > Titre du poste </label>
-<input type="text" id="text" name="text" placeholder="Titre du poste"><br>
+        <label for="titre_poste" > Titre du poste </label>
+        <input type="text" id="text" name="text" placeholder="Titre du poste"><br>
     </div>
     <div>
-<label for="Nom_Entreprise" > Nom de l'enreprise </label>
-<input type="text" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise" ><br>
-</div>
-</div>
-<div  class="for">
+        <label for="Nom_Entreprise" > Nom de l'enreprise </label>
+        <input type="text" id="Nom_Entreprise" name="Nom_Entreprise" placeholder="Nom de l'entreprise" ><br>
+
+    </div>
     <div>
 <label for="Date_début"> Date de début </label>
 <input type="date" id="Date_début" name="Date_début" ><br>
@@ -87,16 +87,20 @@
 <label for="Date_fin" > Date de fin </label>
 <input type="date" id="Date_fin" name="Date_fin" ><br>
 </div>
-</div>
+<div  class="for">
+    <div>
 <label for="Description" > Description</label>
 <textarea  name="description" rows="5" cols="50" placeholder="Description des responsabilités et des réalisations..">
 </textarea>
-<input type="submit" value="Ajouter Expérience"/>
+</div>
+</div>
+</div>
+<input type="button" value="Ajouter Expérience"  onclick = "ajouterExperience()">
 </fieldset>
 
 <fieldset>
 <legend> <strong> Compétences </strong> </legend>
-<div  class="for">
+<div  class="for" id="compétenceFieldset">
 <div>
 <label for="Compétence" > Compétence </label>
 <input type="text" id="Compétence" name="Compétence" placeholder="Saisir votre Compétence" ><br>
@@ -106,13 +110,13 @@
 <input type="text" id="niveau" name="niveau" placeholder="Votre niveau" ><br>
 </div>
 </div>
-<input type="submit" value="Ajouter compétence"/>
+<input type="button" value="Ajouter compétence" onclick="ajoutercompétence()">
 
 </fieldset>
 
 <fieldset>
 <legend> <strong> Langue </strong></legend>
-<div  class="for">
+<div  class="for" id="langueFieldset">
     <div>
 <label for="Langue" > Langue </label>
 <input type="text" id="Langue" name="Langue" placeholder="Saisie la langue" ><br>
@@ -122,12 +126,12 @@
 <input type="text" id="niveau" name="niveau" placeholder="Votre niveau" ><br>
 </div>
 </div>
-<input type="submit" value="Ajouter langue"/>
+<input type="button" value="Ajouter langue" onclick="ajouterlangue()">
 </fieldset>
 
 <fieldset>
 <legend> <strong> Certification et formations complémentaires</strong></legend>
-<div  class="for">
+<div  class="for" id="certificationfiledset" >
     <div>
 <label for="Nom_certification" > Nom de la certification </label>
 <input type="text" id="Nom_certification" name="Nom_certification" placeholder="Nom de la certification" ><br>
@@ -136,10 +140,12 @@
 <label for="Organisme_délivrant_certification" > Organisme délivrant la certification </label>
 <input type="text" id="Organisme_délivrant_certification" name="Organisme_délivrant_certification" placeholder="Organisme délivrant la Certification" ><br>
 </div>
-</div>
+<div>
 <label for="Date_d'obtention" > Date d'obtention </label>
 <input type="date" id="Date_d'obtention" name="Date_d'obtention" ><br>
-<input type="submit" value="Ajouter Certification"/>
+</div>
+</div>
+<input type="button" value="Ajouter Certification" onclick="ajoutercertification()">
 </fieldset>
 
 <label for="cv"> Joindre votre CV</label>
@@ -151,5 +157,6 @@
 <input type="submit" id="Envoyer" value="Envoyer le formulaire"/><br><br><br>
 </div>
 </form>
+<script src="Formulaire.js"></script>
 </body>
 </html>
