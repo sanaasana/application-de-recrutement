@@ -1,6 +1,6 @@
 <?php
 // Inclure le fichier de configuration de la base de données
-include 'config/database.php';
+include '../racine/config.php';
 
 // Exemple de modèle utilisateur
 class UserModel {
