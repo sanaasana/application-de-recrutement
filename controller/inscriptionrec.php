@@ -4,7 +4,7 @@
 $serveur = "localhost";
 $utilisateur = "root";
 $motdepasse = "";
-$base = "upp_recrutement";
+$base = "db_hirelink";
 
 // Connexion à la base de données MySQL
 try {
