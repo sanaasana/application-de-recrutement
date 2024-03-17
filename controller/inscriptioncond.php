@@ -60,10 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['sexe'] = $_POST['sexe'];
             $_SESSION['type_utilisateur'] = $resultat_req_type_utilisateur['type_utilisateur'];
 
-            header("Location: ../pages/offreemploi.php");
+            header("Location: ../frontend/candidat.html");
         } else {
             echo "Erreur : l'insertion dans la base de données a échoué !";
         };
     }
 }
+
 
